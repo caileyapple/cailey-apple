@@ -1,7 +1,7 @@
 body {
-  font-family: Arial;
+  font-family: Times;
   margin: 40px;
-  background: #f5f7fa;
+  background: #7B68EE;
 }
 
 header {
@@ -18,7 +18,7 @@ section {
 }
 
 .project {
-  background: white;
+  background: black;
   padding: 15px;
   border-radius: 6px;
   margin-top: 10px;
