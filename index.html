@@ -5,6 +5,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+<style>
+
+.tabs button{
+  padding:10px;
+  cursor:pointer;
+}
+
+.tab-content{
+  display:none;
+}
+
+.tab-content.active{
+  display:block;
+}
+
+</style>
+  
 <body>
 
 <header>
@@ -12,15 +29,20 @@
   <p>Information Systems Graduate Student | Higher Education Administrative Professional</p>
 </header>
 
-<section>
-  <h2>About Me</h2>
-  <p>
-  I am an Information Systems and Analytics graduate student at Middle Tennessee State University
+<div class="tabs">
+<button onclick="showTab('About')">About Me</button>
+<button onclick="showTab('Projects')">Projects</button>
+<button onclick="showTab('Contact')">Contact</button>
+</div>
+
+<section id="about" class="tab-content active">
+<h2>About Me</h2>
+<p>I am an Information Systems and Analytics graduate student at Middle Tennessee State University
   with professional experience in higher education administration, data analysis, and systems workflows.
-  I am interested in improving how users interact with digital information systems and analytics platforms.
-  </p>
+  I am interested in improving how users interact with digital information systems and analytics platforms.</p>
 </section>
 
+<section id="Projects" class="tab-content">
 <section>
   <h2>Projects</h2>
 
@@ -51,6 +73,27 @@
   <p>Email: caileyapple@gmail.com</p>
   <a href="https://www.linkedin.com/in/cailey-apple-0a9b1b2b3">Visit my LinkedIn!</a>
 </section>
+
+<section id="Contact" class="tab-content">
+<h2>Contact</h2>
+<p>Email: caileyapple@gmail.com</p>
+</section>
+
+<script>
+
+function showTab(tabId){
+
+let tabs = document.querySelectorAll(".tab-content");
+
+tabs.forEach(tab=>{
+tab.classList.remove("active");
+});
+
+document.getElementById(tabId).classList.add("active");
+
+}
+
+</script>
 
 </body>
 </html>
