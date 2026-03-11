@@ -28,6 +28,10 @@ section {
   margin-top: 10px;
 }
 
+section {
+  margin-bottom: 30px;
+}
+
 .education {
   background: white;
   padding: 15px;
